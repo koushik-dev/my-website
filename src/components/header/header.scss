@@ -1,0 +1,23 @@
+span {
+    font-size: 2em;
+    margin: 0 10px;
+    position: relative;
+    animation: jump 0.9s cubic-bezier(0.26,-0.37, 0.63, 1.33) infinite alternate;
+}
+span[data-top="10"] {
+    animation-delay: 0.2s;
+}
+span[data-top="20"] {
+    animation-delay: 0.5s;
+}
+span[data-top="30"] {
+    animation-delay: 0.9s;
+}
+@keyframes jump {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -15px;
+    }
+}
