@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "blog-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A Personal blog site for technical blogs.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Koushik <rskkoushik@gmail.com>",
   "dependencies": {
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
