@@ -25,13 +25,3 @@ const Footer = ({ data }) => {
 }
 
 export default Footer
-
-export const result = graphql`
-query {
-    site {
-        siteMetadata {
-            title
-        }
-    }
-}
-`

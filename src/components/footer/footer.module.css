@@ -6,7 +6,7 @@
     align-items: center;
     padding: 10px;
     box-shadow: 0 -4px 5px var(--shadow-color);
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-color: white;
 }
 .links {
     list-style-type: none;
