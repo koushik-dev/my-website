@@ -1,19 +1,23 @@
 :root {
-  --shadow-color: #2E3739;
+  --shadow-color: #ebebeb;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--shadow-color);
 }
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+#___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
 }

@@ -1,0 +1,20 @@
+.article {
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 10px 0 10px -5px var(--shadow-color), -10px 0 10px -5px var(--shadow-color);
+    height: calc(100% - 100px);
+}
+.header {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.author-card {
+    font-size: 1.4rem;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px;
+    margin: 10px auto;
+}

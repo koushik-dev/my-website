@@ -1,14 +1,17 @@
 .footer {
     display: flex;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     align-items: center;
     padding: 10px;
     box-shadow: 0 -4px 5px var(--shadow-color);
     background-color: white;
+    height: 50px;
 }
 .links {
     list-style-type: none;
     justify-self: end;
+    display: flex;
+}
+.links li {
+    margin: 0 10px;
 }
