@@ -1,0 +1,26 @@
+.card-container {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    overflow: hidden;
+}
+.link-wrapper {
+    height: 300px;
+    width: 350px;
+    margin: 10px;
+}
+.link-wrapper a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.content {
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        max-width: 300px;
+    }
+}

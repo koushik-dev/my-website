@@ -1,0 +1,6 @@
+.tile-wrapper {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: flex-start;
+    min-height: calc(100vh - 100px);
+}

@@ -1,5 +1,6 @@
 :root {
   --shadow-color: #ebebeb;
+  --text-color: #2E3739;
 }
 * {
   margin: 0;

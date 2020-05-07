@@ -24,8 +24,8 @@ const Index = ({ data }) => {
 export default Index
 
 export const query = graphql`
-query PostQuery {
-    markdownRemark {
+query($path: String!) {
+    markdownRemark(frontmatter: {path: {eq: $path}}) {
       html
       frontmatter {
         author

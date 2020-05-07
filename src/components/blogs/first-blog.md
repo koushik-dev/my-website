@@ -2,9 +2,10 @@
 title: "My first blog"
 author: "Koushik"
 date: "01-05-2020"
-path: "/blog/today"
+path: "/blog/opening"
+bannerImg: "./images/first-blog/suit1.jpg"
 ---
-![image](../../images/suit.jpg)
+![image](./images/first-blog/suit1.jpg)
 \
 This is my personal blog site where i planned to post blogs regarding how i construct this site.  
 \
