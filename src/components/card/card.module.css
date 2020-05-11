@@ -5,8 +5,8 @@
     overflow: hidden;
 }
 .link-wrapper {
-    height: 300px;
-    width: 350px;
+    min-height: 300px;
+    min-width: 350px;
     margin: 10px;
 }
 .link-wrapper a {

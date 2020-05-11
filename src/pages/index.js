@@ -12,7 +12,6 @@ const IndexPage = ({ data }) => (
       {data.frontmatter.edges.map((edge, i) => (
         <div key={i}>
           <Card
-            fluid={data.placeholderImage.childImageSharp.fluid}
             frontmatter={edge.node.frontmatter}
           />
         </div>
@@ -25,19 +24,19 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  placeholderImage: file(relativePath: {eq: "suit.jpg"}) {
-    childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
   frontmatter: allMarkdownRemark {
     edges {
       node {
         frontmatter {
           title
           path
+          bannerImg {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
