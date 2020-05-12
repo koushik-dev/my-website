@@ -38,6 +38,14 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
+          name: "twitter:image",
+          content: "https://startcrowd.club/images/startcrowdimage.jpg"
         }
       ].concat(meta)}
     />
