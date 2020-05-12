@@ -41,11 +41,18 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: "twitter:card",
-          content: "summary_large_image"
+          content: "summary"
+        },
+        {
+          name: 'og:title',
+          content: 'Personal Blog'
         },
         {
           name: "twitter:image",
-          content: "https://startcrowd.club/images/startcrowdimage.jpg"
+          content: "https://unsplash.it/800/500"
+        },{
+          name: 'twitter:site',
+          content: 'https://buildblog.netlify.app/blog/typographyandalignments'
         }
       ].concat(meta)}
     />
