@@ -7,7 +7,7 @@ import Card from "../components/card/card"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" twitter = {{image: "../images/suit.jpg"}} />
+    <SEO title="Home" twitterImage = "../images/suit.jpg" />
     <div className={styles.tileWrapper}>
       {data.frontmatter.edges.map((edge, i) => (
         <div key={i}>
