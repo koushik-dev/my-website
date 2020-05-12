@@ -3,6 +3,7 @@ module.exports = {
     title: `My Personal Blog`,
     description: `A blog site to discuss this site construction.`,
     author: `Koushik`,
+    siteUrl: `https://buildblog.netlify.app`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
