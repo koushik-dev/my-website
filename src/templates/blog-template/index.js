@@ -34,7 +34,11 @@ query($path: String!) {
         title
         path
         bannerImg {
-          absolutePath
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
         }
       }
     }
