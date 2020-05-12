@@ -50,7 +50,7 @@ function SEO({ description, lang, meta, title, customUrl, twitterImage }) {
         },
         {
           name: "twitter:image",
-          content: '../images/suit.jpg'
+          content: twitterImage
         },
         {
           name: 'twitter:site',

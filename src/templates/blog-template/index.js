@@ -9,7 +9,7 @@ const Index = ({ data }) => {
 
     return (
       <>
-      <SEO title={markdownRemark?.frontmatter?.title} twitterImage={markdownRemark?.frontmatter?.bannerImg?.absolutePath} customUrl={markdownRemark?.frontmatter?.path} />
+      <SEO title={markdownRemark?.frontmatter?.title} twitterImage={markdownRemark?.frontmatter?.bannerImg?.childImageSharp?.fluid?.src} customUrl={markdownRemark?.frontmatter?.path} />
       <Layout>
         <article className={styles.article}>
           <h1 className={styles.header}>{markdownRemark?.frontmatter?.title}</h1>
