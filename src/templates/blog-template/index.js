@@ -10,12 +10,9 @@ const Index = ({ data }) => {
       <Layout>
         <article className={styles.article}>
           <h1 className={styles.header}>{markdownRemark?.frontmatter?.title}</h1>
+          <p className={styles.header}>{markdownRemark?.frontmatter?.author}</p>
+          <p className={styles.header}>{markdownRemark?.frontmatter?.date}</p>
           <div dangerouslySetInnerHTML={{__html: `<p>${markdownRemark.html}</p>`}}></div>
-          
-          
-          <div className={styles.authorCard}>
-            <p>Author: {markdownRemark?.frontmatter?.author}</p>
-          </div>
         </article>
       </Layout>
     )

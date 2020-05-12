@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My Personal Website`,
+    title: `My Personal Blog`,
     description: `A blog site to discuss this site construction.`,
     author: `Koushik`,
   },
@@ -44,6 +44,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [ 100, 200, 300, 400, 500, 600, 700, 800, 900 ]
+          }
+        ]
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

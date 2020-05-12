@@ -24,7 +24,7 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  frontmatter: allMarkdownRemark {
+  frontmatter: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
     edges {
       node {
         frontmatter {

@@ -16,7 +16,7 @@ const Footer = () => {
       <footer className={styles.footer}>
         <ul className={styles.links}>
           <li>{data?.site?.siteMetadata?.author}</li>
-          <li>&copy;Copyrights Reserved.</li>
+          <li>&copy; Copyrights Reserved.</li>
         </ul>
       </footer>
     </>

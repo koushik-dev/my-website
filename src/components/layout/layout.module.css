@@ -18,6 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  font-family: poppins, sans-serif;
+  color: var(--text-color);
 }
 #___gatsby, #gatsby-focus-wrapper {
   height: 100%;
