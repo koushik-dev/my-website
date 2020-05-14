@@ -1,6 +1,9 @@
 .tile-wrapper {
+    max-width: 1140px;
+    margin: auto;
     padding: 50px 10px;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     min-height: calc(100vh - 120px);
 }
