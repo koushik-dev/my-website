@@ -1,5 +1,5 @@
 ---
-title: "Twitter card"
+title: "We need a Twitter card to show off!!!"
 author: "Koushik"
 date: "14-05-2020"
 path: "/blog/twittercard"
