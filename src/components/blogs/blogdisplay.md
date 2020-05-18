@@ -1,7 +1,7 @@
 ---
 title: "Creating a page to display blogs"
 author: "Koushik"
-date: "07-05-2020"
+date: "2020-05-07T12:43:02.742Z"
 path: "/blog/navigatetoblogs"
 bannerImg: "./images/blogdisplay/laptop.jpeg"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Typography and Alignments"
 author: "Koushik"
-date: "12-05-2020"
+date: "2020-05-12T04:36:24.401Z"
 path: "/blog/typographyandalignments"
 bannerImg: "./images/typography/banner.jpg"
 ---

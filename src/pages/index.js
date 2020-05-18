@@ -1,14 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styles from "./index.module.css";
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/card/card"
+import Card from "../components/card"
+import styled from "@emotion/styled";
+
+const TileWrapper = styled.div`
+  max-width: 1140px;
+  margin: auto;
+  padding: 50px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 370px);
+  justify-content: center;
+  justify-items: center;
+  min-height: calc(100vh - 120px);
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" twitterImage = {data.image?.fluid?.src} />
-    <div className={styles.tileWrapper}>
+    <TileWrapper>
       {data.frontmatter.edges.map((edge, i) => (
         <div key={i}>
           <Card
@@ -16,7 +30,7 @@ const IndexPage = ({ data }) => (
           />
         </div>
       ))}
-    </div>
+    </TileWrapper>
   </Layout>
 )
 

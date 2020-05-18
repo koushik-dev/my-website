@@ -1,7 +1,7 @@
 ---
 title: "We need a Twitter card to show off!!!"
 author: "Koushik"
-date: "14-05-2020"
+date: "2020-05-14T15:31:17.455Z"
 path: "/blog/twittercard"
 bannerImg: "./images/twitter card/twitter.jpg"
 ---

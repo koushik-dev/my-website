@@ -1,7 +1,7 @@
 ---
 title: "My first blog"
 author: "Koushik"
-date: "01-05-2020"
+date: "2020-05-01T07:05:26.777Z"
 path: "/blog/opening"
 bannerImg: "./images/first-blog/suit1.jpg"
 ---
