@@ -22,6 +22,7 @@ const LinkWrapper = styled.div`
   }
 `
 const CardContainer = styled.div`
+  background-color: var(--card-bg);
   height: 275px;
   max-width: 350px;
   border-radius: 10px;
@@ -34,7 +35,7 @@ const CardContainer = styled.div`
 const Content = styled.p`
   margin: 10px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

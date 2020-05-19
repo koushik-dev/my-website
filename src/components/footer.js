@@ -8,7 +8,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
   padding: 10px;
   box-shadow: 0 -4px 5px var(--shadow-color);
-  background-color: white;
+  background-color: var(--bg-color);
   height: 50px;
 `
 

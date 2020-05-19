@@ -36,8 +36,8 @@ const Article = styled.article`
 `
 
 const header = css`
-text-align: center;
-margin: 10px 0;`
+  text-align: center;
+  margin: 10px 0;`
  
 const Index = ({ data }) => {
     let { markdownRemark } = data;

@@ -4,9 +4,17 @@ import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
 
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/core"
+import styled from "@emotion/styled"
+
+const Container = styled.div`
+  background-color: var(--bg-color);
+  padding-top: 70px;
+`
 
 const Layout = ({ children }) => {
+  document.documentElement.querySelector("body").classList.add("light")
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,37 +27,59 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Global styles={css`
-        body {
-          margin: 0;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          height: 100%;
-          font-family: poppins, sans-serif;
-          color: var(--text-color);
-        }
-        :root {
-          --shadow-color: #ebebeb;
-          --text-color: #2E3739;
-        }
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        html {
-          font-family: sans-serif;
-          -ms-text-size-adjust: 100%;
-          -webkit-text-size-adjust: 100%;
-          height: 100%;
-        }
-      `}/>
+      <Global
+        styles={css`
+          body {
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            height: 100%;
+            font-family: poppins, sans-serif;
+            color: var(--text-color);
+          }
+          .light {
+            --bg-color: white;
+            --shadow-color: #ebebeb;
+            --text-color: #2e3739;
+            --switch-color: orange;
+            --switch-shadow: 15px 0 0 -5px var(--switch-color),
+              -15px 0 0 -5px var(--switch-color),
+              0 15px 0 -5px var(--switch-color),
+              0 -15px 0 -5px var(--switch-color),
+              10px 10px 0 -5px var(--switch-color),
+              -10px -10px 0 -5px var(--switch-color),
+              -10px 10px 0 -5px var(--switch-color),
+              10px -10px 0 -5px var(--switch-color);
+            --switch-content: null;
+            --card-bg: #ffffff;
+          }
+          .dark {
+            --bg-color: #242e4c;
+            --shadow-color: #000000;
+            --text-color: white;
+            --switch-color: wheat;
+            --switch-shadow: none;
+            --switch-content: ${`''`};
+            --card-bg: #222222
+          }
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+          }
+        `}
+      />
       <Header siteTitle={data?.site?.siteMetadata?.title} />
-      {children}
+      <Container>{children}</Container>
       <Footer />
     </>
   )
 }
-
 
 export default Layout

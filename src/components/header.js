@@ -1,25 +1,40 @@
-
 import PropTypes from "prop-types"
 import React from "react"
 
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import { Link } from "gatsby"
+import styled from "@emotion/styled"
+import ThemeSwitcher from "./ThemeSwitcher"
 
 const HeaderTag = styled.header`
-    background-color: white;
-    height: 70px;
-    box-shadow: 0 4px 5px var(--shadow-color);
-    color: #000;
-    padding: 10px 20px;
-    a {
-      text-decoration: none;
-      color: var(--text-color);
-    }
+  background-color: var(--bg-color);
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 4px 5px var(--shadow-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+`
+
+const Heading = styled.h1`
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Header = ({ siteTitle }) => (
   <HeaderTag>
-    <Link to="/"><h1>{siteTitle}</h1></Link>
+    <Link to="/">
+      <Heading>{siteTitle}</Heading>
+    </Link>
+    <ThemeSwitcher />
   </HeaderTag>
 )
 
