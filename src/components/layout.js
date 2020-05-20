@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
@@ -13,7 +13,9 @@ const Container = styled.div`
 `
 
 const Layout = ({ children }) => {
-  document.documentElement.querySelector("body").classList.add("light")
+  useEffect(() => {
+    document.documentElement.querySelector("body").classList.add("light")
+  }, [])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -60,7 +62,7 @@ const Layout = ({ children }) => {
             --switch-color: wheat;
             --switch-shadow: none;
             --switch-content: ${`''`};
-            --card-bg: #222222
+            --card-bg: #222222;
           }
           * {
             margin: 0;
