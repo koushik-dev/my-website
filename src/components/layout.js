@@ -8,7 +8,7 @@ import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const Container = styled.div`
-  background-color: var(--bg-color);
+  background-color: var(--shadow-color);
   padding-top: 70px;
 `
 
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
           }
           .light {
             --bg-color: white;
-            --shadow-color: #ebebeb;
+            --shadow-color: #dde3fb;
             --text-color: #2e3739;
             --switch-color: orange;
             --switch-shadow: 15px 0 0 -5px var(--switch-color),
@@ -54,6 +54,7 @@ const Layout = ({ children }) => {
               10px -10px 0 -5px var(--switch-color);
             --switch-content: null;
             --card-bg: #ffffff;
+            --highlight-color: #5e6afa;
           }
           .dark {
             --bg-color: #242e4c;
@@ -63,6 +64,7 @@ const Layout = ({ children }) => {
             --switch-shadow: none;
             --switch-content: ${`''`};
             --card-bg: #222222;
+            --highlight-color: #5a73d8;
           }
           * {
             margin: 0;

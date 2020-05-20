@@ -9,8 +9,8 @@ const Article = styled.article`
   max-width: 80%;
   margin: auto;
   padding: 20px;
-  box-shadow: 10px 0 10px -5px var(--shadow-color), -10px 0 10px -5px var(--shadow-color);
   height: calc(100% - 100px);
+  background-color: var(--bg-color);
   @media screen and (max-width: 768px) {
     max-width: 100%;
   }
@@ -18,15 +18,18 @@ const Article = styled.article`
     padding: 0 1rem;
   }
   code {
-    background-color: #ff84c1;
+    background-color: var(--highlight-color);
     color: white;
     font-size: 1.5rem;
     border-bottom: 2px solid #000;
     padding: 0 5px;
+    border-radius: 0 0 5px 5px;
   }
   kbd {
     display: block;
-    background: #eeeeee;
+    background: var(--shadow-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
     padding: 10px;
     border-radius: 3px;
     border-color: red;

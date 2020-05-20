@@ -5,15 +5,13 @@ import { css } from "@emotion/core"
 const Theme = styled.div`
   ${({ dark }) =>
     css`
+      justify-self: end;
       cursor: pointer;
       height: 15px;
       background-color: var(--switch-color);
       width: 15px;
       border-radius: 100vh;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       box-shadow: var(--switch-shadow);
       transition: all 0.25s ease;
       &::before {

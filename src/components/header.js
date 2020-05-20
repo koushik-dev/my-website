@@ -15,8 +15,9 @@ const HeaderTag = styled.header`
   position: fixed;
   z-index: 999;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  white-space: nowrap;
   a {
     text-decoration: none;
     color: var(--text-color);
