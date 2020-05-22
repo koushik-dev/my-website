@@ -5,7 +5,7 @@ date: "2020-05-14T15:31:17.455Z"
 path: "/blog/twittercard"
 bannerImg: "./images/twitter card/twitter.jpg"
 ---
-![image](./images/twitter card/twitter.jpg)  
+![image](./images/twitter card/twitter1.jpg)  
 Today i did something new. After completing the last post i posted it on twitter, then realized that it is not looking as other links are shown.  
 \
 So started debugging then found that twitter need some sort of `metaTag` to recognize it as link and display in the format we specify.  

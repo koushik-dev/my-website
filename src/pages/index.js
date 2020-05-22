@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,24 +15,49 @@ const TileWrapper = styled.div`
   justify-items: center;
   min-height: calc(100vh - 120px);
   @media screen and (max-width: 768px) {
-    padding: 30px 0;
+    padding: 10px 0;
   }
 `
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" twitterImage = {data.image?.fluid?.src} />
-    <TileWrapper>
-      {data.frontmatter.edges.map((edge, i) => (
-        <div key={i}>
-          <Card
-            frontmatter={edge.node.frontmatter}
-          />
-        </div>
-      ))}
-    </TileWrapper>
-  </Layout>
-)
+const Input = styled.input`
+  margin: 50px auto 0;
+  display: block;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  @media screen and (max-width: 768px) {
+    margin: 10px;
+    font-size: 1rem;
+    width: calc(100% - 20px);
+  }
+`
+
+const IndexPage = ({ data }) => {
+  let [search, setSearch] = useState(''),
+      [cards, setCards] = useState(data.frontmatter.edges.slice(0));
+
+  useEffect(() => {
+    setCards(data.frontmatter.edges.filter(edge => edge.node.frontmatter.title.toLowerCase().includes(search  )))
+  }, [search])
+
+  const onSearch = (e) => {
+    setSearch(e.target.value);
+  }
+  return (
+    <Layout>
+      <SEO title="Home" twitterImage={data.image?.fluid?.src} />
+      <Input type="text" placeholder="Type to search" name="search" value={search} onChange={onSearch}></Input>
+      <TileWrapper>
+        {cards.map((edge, i) => (
+          <div key={i}>
+            <Card frontmatter={edge.node.frontmatter} />
+          </div>
+        ))}
+      </TileWrapper>
+    </Layout>
+  )
+}
 
 export default IndexPage
 

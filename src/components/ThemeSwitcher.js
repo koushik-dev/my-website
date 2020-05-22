@@ -28,10 +28,17 @@ const Theme = styled.div`
 `
 
 const ThemeSwitcher = () => {
+
+  // toggle body class for theme
   const changeTheme = () => {
     document.documentElement.querySelector("body").classList.toggle("dark")
   }
-  return <Theme onClick={changeTheme}></Theme>
+
+  // key press
+  const onEnter = e => {
+    if (e.key === "Enter") changeTheme()
+  }
+  return <Theme onKeyPress={onEnter} onClick={changeTheme} tabIndex="0"></Theme>
 }
 
 export default ThemeSwitcher
