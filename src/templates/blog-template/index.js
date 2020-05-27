@@ -37,6 +37,27 @@ const Article = styled.article`
     border-style: solid;
   }
 `
+const Category = styled.span`
+  margin: 0 0 10px 10px;
+  font-size: 0.9rem;
+  background-color: gold;
+  color: black;
+  padding: 0 10px 0 20px;
+  display: inline-block;
+  position: relative;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 100vh;
+    top: 0;
+    transform: translateY(50%);
+    left: 5%;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-color);
+  }
+`
 
 const header = css`
   text-align: center;
@@ -53,6 +74,9 @@ const Index = ({ data }) => {
           <h1 css={css`${header}`}>{markdownRemark?.frontmatter?.title}</h1>
           <p css={css`${header}`}>{markdownRemark?.frontmatter?.author}</p>
           <p css={css`${header}`}>{markdownRemark?.frontmatter?.date}</p>
+          <p css={css`${header}`}>{markdownRemark?.frontmatter?.categories.map(category => (
+            <Category>{category}</Category>
+          ))}</p>
           <div dangerouslySetInnerHTML={{__html: `<p>${markdownRemark.html}</p>`}}></div>
         </Article>
       </Layout>
@@ -71,6 +95,7 @@ query($path: String!) {
         date(formatString: "DD MMM YYYY")
         title
         path
+        categories
         bannerImg {
           childImageSharp {
             fluid {

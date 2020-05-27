@@ -23,7 +23,7 @@ const LinkWrapper = styled.div`
 `
 const CardContainer = styled.div`
   background-color: var(--card-bg);
-  height: 275px;
+  min-height: 275px;
   max-width: 350px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px var(--shadow-color);
@@ -34,6 +34,7 @@ const CardContainer = styled.div`
 `
 const Content = styled.p`
   margin: 10px;
+  margin-bottom: 0;
   font-size: 1.2rem;
   font-weight: 500;
   white-space: nowrap;
@@ -41,17 +42,42 @@ const Content = styled.p`
   text-overflow: ellipsis;
 `
 
+const Category = styled.span`
+  margin: 0 0 10px 10px;
+  font-size: 0.9rem;
+  background-color: gold;
+  color: black;
+  padding: 0 10px 0 20px;
+  display: inline-block;
+  position: relative;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 100vh;
+    top: 0;
+    transform: translateY(50%);
+    left: 5%;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-color);
+  }
+`
+
 const Card = ({ frontmatter }) => {
-    return (
-      <LinkWrapper>
-        <Link to={frontmatter.path}>
-          <CardContainer>
-            <Img fluid={frontmatter.bannerImg.childImageSharp.fluid} css={css`height:220px`} />
-            <Content>{frontmatter.title}</Content>
-          </CardContainer>
-        </Link>
-      </LinkWrapper>
-    )
+  return (
+    <LinkWrapper>
+      <Link to={frontmatter.path}>
+        <CardContainer>
+          <Img fluid={frontmatter?.bannerImg?.childImageSharp?.fluid} css={css`height:220px`} />
+          <Content>{frontmatter.title}</Content>
+          {frontmatter?.categories?.map(category => (
+            <Category>{category}</Category>
+          ))}
+        </CardContainer>
+      </Link>
+    </LinkWrapper>
+  )
 }
 
 export default Card

@@ -69,6 +69,7 @@ query MyQuery {
         frontmatter {
           title
           path
+          categories
           bannerImg {
             childImageSharp {
               fluid {
