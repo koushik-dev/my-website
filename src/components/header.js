@@ -11,12 +11,8 @@ const HeaderTag = styled.header`
   width: 100%;
   box-shadow: 0 4px 5px var(--shadow-color);
   color: var(--text-color);
-  padding: 10px 20px;
   position: fixed;
   z-index: 999;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   white-space: nowrap;
   a {
     text-decoration: none;
@@ -24,16 +20,10 @@ const HeaderTag = styled.header`
   }
 `
 
-const Heading = styled.h1`
-  @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`
-
 const Header = ({ siteTitle }) => (
-  <HeaderTag>
-    <Link to="/">
-      <Heading>{siteTitle}</Heading>
+  <HeaderTag className="px-4 py-3 level is-mobile">
+    <Link to="/" className="level-left">
+      <h1 className="is-size-4">{siteTitle}</h1>
     </Link>
     <ThemeSwitcher />
   </HeaderTag>

@@ -7,9 +7,9 @@ const Theme = styled.div`
     css`
       justify-self: end;
       cursor: pointer;
-      height: 15px;
+      height: 13px;
       background-color: var(--switch-color);
-      width: 15px;
+      width: 13px;
       border-radius: 100vh;
       position: relative;
       box-shadow: var(--switch-shadow);
@@ -38,7 +38,7 @@ const ThemeSwitcher = () => {
   const onEnter = e => {
     if (e.key === "Enter") changeTheme()
   }
-  return <Theme onKeyPress={onEnter} onClick={changeTheme} tabIndex="0"></Theme>
+  return <Theme onKeyPress={onEnter} onClick={changeTheme} tabIndex="0" className="level-right"></Theme>
 }
 
 export default ThemeSwitcher

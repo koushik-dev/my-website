@@ -44,14 +44,14 @@ const Layout = ({ children }) => {
             --shadow-color: #dde3fb;
             --text-color: #2e3739;
             --switch-color: orange;
-            --switch-shadow: 15px 0 0 -5px var(--switch-color),
-              -15px 0 0 -5px var(--switch-color),
-              0 15px 0 -5px var(--switch-color),
-              0 -15px 0 -5px var(--switch-color),
-              10px 10px 0 -5px var(--switch-color),
-              -10px -10px 0 -5px var(--switch-color),
-              -10px 10px 0 -5px var(--switch-color),
-              10px -10px 0 -5px var(--switch-color);
+            --switch-shadow: 12px 0 0 -5px var(--switch-color),
+              -12px 0 0 -5px var(--switch-color),
+              0 13px 0 -5px var(--switch-color),
+              0 -13px 0 -5px var(--switch-color),
+              9px 9px 0 -5px var(--switch-color),
+              -9px -9px 0 -5px var(--switch-color),
+              -9px 9px 0 -5px var(--switch-color),
+              9px -9px 0 -5px var(--switch-color);
             --switch-content: null;
             --card-bg: #ffffff;
             --highlight-color: #5e6afa;

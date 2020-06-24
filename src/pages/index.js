@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
+import 'bulma';
 
 const TileWrapper = styled.div`
   max-width: 1140px;
@@ -21,14 +22,8 @@ const TileWrapper = styled.div`
 
 const Input = styled.input`
   margin: 50px auto 0;
-  display: block;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
   @media screen and (max-width: 768px) {
     margin: 10px;
-    font-size: 1rem;
     width: calc(100% - 20px);
   }
 `
@@ -38,8 +33,8 @@ const IndexPage = ({ data }) => {
       [cards, setCards] = useState(data.frontmatter.edges.slice(0));
 
   useEffect(() => {
-    setCards(data.frontmatter.edges.filter(edge => edge.node.frontmatter.title.toLowerCase().includes(search  )))
-  }, [search])
+    setCards(data.frontmatter.edges.filter(edge => edge.node.frontmatter.title.toLowerCase().includes(search)))
+  }, [search, data])
 
   const onSearch = (e) => {
     setSearch(e.target.value);
@@ -47,7 +42,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" twitterImage={data.image?.fluid?.src} />
-      <Input type="text" placeholder="Type to search" name="search" value={search} onChange={onSearch}></Input>
+      <Input type="text" className="input column is-one-third" placeholder="Type to search" name="search" value={search} onChange={onSearch}></Input>
       <TileWrapper>
         {cards.map((edge, i) => (
           <div key={i}>
@@ -63,7 +58,7 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  frontmatter: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
+  frontmatter: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         frontmatter {

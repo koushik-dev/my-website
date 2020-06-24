@@ -1,9 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 const Article = styled.article`
   max-width: 80%;
@@ -61,34 +61,69 @@ const Category = styled.span`
 
 const header = css`
   text-align: center;
-  margin: 10px 0;`
- 
-const Index = ({ data }) => {
-    let { markdownRemark } = data;
+  margin: 10px 0;
+`
 
-    return (
-      <>
-      <SEO title={markdownRemark?.frontmatter?.title} twitterImage={markdownRemark?.frontmatter?.bannerImg?.childImageSharp?.fluid?.src} customUrl={markdownRemark?.frontmatter?.path} />
+const Index = ({ data }) => {
+  let { markdownRemark } = data
+
+  return (
+    <>
+      <SEO
+        title={markdownRemark?.frontmatter?.title}
+        twitterImage={
+          markdownRemark?.frontmatter?.bannerImg?.childImageSharp?.fluid?.src
+        }
+        customUrl={markdownRemark?.frontmatter?.path}
+      />
       <Layout>
         <Article>
-          <h1 css={css`${header}`}>{markdownRemark?.frontmatter?.title}</h1>
-          <p css={css`${header}`}>{markdownRemark?.frontmatter?.author}</p>
-          <p css={css`${header}`}>{markdownRemark?.frontmatter?.date}</p>
-          <p css={css`${header}`}>{markdownRemark?.frontmatter?.categories.map(category => (
-            <Category>{category}</Category>
-          ))}</p>
-          <div dangerouslySetInnerHTML={{__html: `<p>${markdownRemark.html}</p>`}}></div>
+          <h1
+            css={css`
+              ${header}
+            `}
+          >
+            {markdownRemark?.frontmatter?.title}
+          </h1>
+          <p
+            css={css`
+              ${header}
+            `}
+          >
+            {markdownRemark?.frontmatter?.author}
+          </p>
+          <p
+            css={css`
+              ${header}
+            `}
+          >
+            {markdownRemark?.frontmatter?.date}
+          </p>
+          <p
+            css={css`
+              ${header}
+            `}
+          >
+            {markdownRemark?.frontmatter?.categories.map((category, i) => (
+              <Category key={i}>{category}</Category>
+            ))}
+          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<p>${markdownRemark.html}</p>`,
+            }}
+          ></div>
         </Article>
       </Layout>
-      </>
-    )
+    </>
+  )
 }
 
 export default Index
 
 export const query = graphql`
-query($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         author
@@ -105,5 +140,5 @@ query($path: String!) {
         }
       }
     }
-  }      
+  }
 `

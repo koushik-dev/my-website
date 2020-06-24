@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
 import Img from "gatsby-image"
-import { Link } from "gatsby";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { Link } from "gatsby"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 const LinkWrapper = styled.div`
   min-height: 300px;
@@ -69,10 +69,15 @@ const Card = ({ frontmatter }) => {
     <LinkWrapper>
       <Link to={frontmatter.path}>
         <CardContainer>
-          <Img fluid={frontmatter?.bannerImg?.childImageSharp?.fluid} css={css`height:220px`} />
+          <Img
+            fluid={frontmatter?.bannerImg?.childImageSharp?.fluid}
+            css={css`
+              height: 220px;
+            `}
+          />
           <Content>{frontmatter.title}</Content>
-          {frontmatter?.categories?.map(category => (
-            <Category>{category}</Category>
+          {frontmatter?.categories?.map((category, i) => (
+            <Category key={i}>{category}</Category>
           ))}
         </CardContainer>
       </Link>
