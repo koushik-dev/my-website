@@ -41,12 +41,32 @@ function SEO({ description, lang, meta, title, customUrl, twitterImage }) {
           content: metaDescription,
         },
         {
-          name: "twitter:card",
-          content: "summary"
+          name: 'og:type',
+          content: 'website'
+        },
+        {
+          name: 'og:url',
+          content: `${site.siteMetadata.siteUrl}/${customUrl || ''}`
         },
         {
           name: 'og:title',
           content: title
+        },
+        {
+          name: 'og:description',
+          content: metaDescription
+        },
+        {
+          name: 'og:image',
+          content: `${site.siteMetadata.siteUrl}${twitterImage}`
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image"
+        },
+        {
+          name: 'twitter:creator',
+          content: '@koushikrsk'
         },
         {
           name: "twitter:image",
