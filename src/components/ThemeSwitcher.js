@@ -39,8 +39,7 @@ const onEnter = e => {
 
 const setSystemTheme = () => {
   if (window.matchMedia)
-    if (!window.matchMedia("(prefers-color-scheme: dark)").matches)
-      changeTheme()
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) changeTheme()
 }
 
 const themeListener = () => {
@@ -48,7 +47,7 @@ const themeListener = () => {
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", e => {
-        !e.matches && changeTheme()
+        if (e.matches !== document.documentElement.querySelector("body").classList.contains('dark')) changeTheme()
       })
   }
 }
