@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -53,8 +53,10 @@ const themeListener = () => {
   }
 }
 const ThemeSwitcher = () => {
-  setSystemTheme()
-  themeListener()
+  useEffect(() => {
+    setSystemTheme()
+    themeListener()
+  }, [])
   return <Theme onKeyPress={onEnter} onClick={changeTheme} tabIndex="0" className="level-right"></Theme>
 }
 
