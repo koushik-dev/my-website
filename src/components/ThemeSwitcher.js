@@ -27,17 +27,34 @@ const Theme = styled.div`
     `}
 `
 
+// toggle body class for theme
+const changeTheme = () => {
+  document.documentElement.querySelector("body").classList.toggle("dark")
+}
+
+// key press
+const onEnter = e => {
+  if (e.key === "Enter") changeTheme()
+}
+
+const setSystemTheme = () => {
+  if (window.matchMedia)
+    if (!window.matchMedia("(prefers-color-scheme: dark)").matches)
+      changeTheme()
+}
+
+const themeListener = () => {
+  if (window.matchMedia) {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", e => {
+        !e.matches && changeTheme()
+      })
+  }
+}
 const ThemeSwitcher = () => {
-
-  // toggle body class for theme
-  const changeTheme = () => {
-    document.documentElement.querySelector("body").classList.toggle("dark")
-  }
-
-  // key press
-  const onEnter = e => {
-    if (e.key === "Enter") changeTheme()
-  }
+  setSystemTheme()
+  themeListener()
   return <Theme onKeyPress={onEnter} onClick={changeTheme} tabIndex="0" className="level-right"></Theme>
 }
 
