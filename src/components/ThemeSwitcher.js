@@ -1,30 +1,25 @@
 import React, { useEffect } from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 
 const Theme = styled.div`
-  ${({ dark }) =>
-    css`
-      justify-self: end;
-      cursor: pointer;
-      height: 13px;
-      background-color: var(--switch-color);
-      width: 13px;
-      border-radius: 100vh;
-      position: relative;
-      box-shadow: var(--switch-shadow);
-      transition: all 0.25s ease;
-      &::before {
-        content: var(--switch-content);
-        width: 100%;
-        height: 100%;
-        border-radius: 100vh;
-        position: absolute;
-        background-color: var(--bg-color);
-        top: -30%;
-        right: -40%;
-      }
-    `}
+  justify-self: end;
+  cursor: pointer;
+  height: 13px;
+  background-color: var(--switch-color);
+  width: 13px;
+  border-radius: 100vh;
+  position: relative;
+  box-shadow: var(--switch-shadow);
+  transition: all 0.25s ease;
+  &::before {
+    content: var(--switch-content);
+    width: 100%;
+    height: 100%;
+    border-radius: 100vh;
+    position: absolute;
+    background-color: var(--bg-color);
+    top: -30%;
+    right: -40%;
 `
 
 // toggle body class for theme
