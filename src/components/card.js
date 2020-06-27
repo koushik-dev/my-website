@@ -7,7 +7,6 @@ import { css } from "@emotion/core"
 
 const LinkWrapper = styled.div`
   min-height: 300px;
-  min-width: 350px;
   margin: 10px;
   transition: transform 0.5s ease;
   a {
@@ -17,20 +16,13 @@ const LinkWrapper = styled.div`
   &:hover {
     transform: scale(1.03);
   }
-  @media screen and (max-width: 768px) {
-    min-width: 300px;
-  }
 `
 const CardContainer = styled.div`
   background-color: var(--card-bg);
   min-height: 275px;
-  max-width: 350px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px var(--shadow-color);
   overflow: hidden;
-  @media screen and (max-width: 768px) {
-    max-width: 300px;
-  }
 `
 const Content = styled.p`
   margin: 10px;

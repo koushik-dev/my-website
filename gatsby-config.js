@@ -38,11 +38,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `My personal blog`,
-        short_name: `blog`,
+        name: `Koushik's personal blog`,
+        short_name: `Koushik`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#80dfff`,
+        theme_color: `#00bfff`,
         display: `minimal-ui`,
         icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },

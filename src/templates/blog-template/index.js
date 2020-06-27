@@ -6,6 +6,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Article = styled.article`
+  line-height: 2;
   max-width: 80%;
   margin: auto;
   padding: 20px;
@@ -16,14 +17,6 @@ const Article = styled.article`
   }
   ul {
     padding: 0 1rem;
-  }
-  code {
-    background-color: var(--highlight-color);
-    color: white;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #000;
-    padding: 0 5px;
-    border-radius: 0 0 5px 5px;
   }
   kbd {
     display: block;
@@ -76,45 +69,43 @@ const Index = ({ data }) => {
         }
         customUrl={markdownRemark?.frontmatter?.path}
       />
-      <Layout>
-        <Article>
-          <h1
-            css={css`
-              ${header}
-            `}
-          >
-            {markdownRemark?.frontmatter?.title}
-          </h1>
-          <p
-            css={css`
-              ${header}
-            `}
-          >
-            {markdownRemark?.frontmatter?.author}
-          </p>
-          <p
-            css={css`
-              ${header}
-            `}
-          >
-            {markdownRemark?.frontmatter?.date}
-          </p>
-          <p
-            css={css`
-              ${header}
-            `}
-          >
-            {markdownRemark?.frontmatter?.categories.map((category, i) => (
-              <Category key={i}>{category}</Category>
-            ))}
-          </p>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<p>${markdownRemark.html}</p>`,
-            }}
-          ></div>
-        </Article>
-      </Layout>
+      <Article>
+        <h1
+          css={css`
+            ${header}
+          `}
+        >
+          {markdownRemark?.frontmatter?.title}
+        </h1>
+        <p
+          css={css`
+            ${header}
+          `}
+        >
+          {markdownRemark?.frontmatter?.author}
+        </p>
+        <p
+          css={css`
+            ${header}
+          `}
+        >
+          {markdownRemark?.frontmatter?.date}
+        </p>
+        <p
+          css={css`
+            ${header}
+          `}
+        >
+          {markdownRemark?.frontmatter?.categories.map((category, i) => (
+            <Category key={i}>{category}</Category>
+          ))}
+        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `<p>${markdownRemark.html}</p>`,
+          }}
+        ></div>
+      </Article>
     </>
   )
 }
