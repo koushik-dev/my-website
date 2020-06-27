@@ -20,13 +20,17 @@ const LinkWrapper = styled.div`
 const CardContainer = styled.div`
   background-color: var(--card-bg);
   min-height: 275px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 5px 5px 10px var(--shadow-color);
   overflow: hidden;
+  box-shadow: 5px 5px red, 10px 10px blue;
+  transition: box-shadow 0.5s ease;
+  &:hover {
+    box-shadow: none;
+  }
 `
 const Content = styled.p`
   margin: 10px;
-  margin-bottom: 0;
   font-size: 1.2rem;
   font-weight: 500;
   white-space: nowrap;
