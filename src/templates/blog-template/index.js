@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Article = styled.article`
-  line-height: 2;
   max-width: 80%;
   margin: auto;
   padding: 20px;
@@ -31,30 +29,22 @@ const Article = styled.article`
   }
 `
 const Category = styled.span`
-  margin: 0 0 10px 10px;
+  margin: 10px;
   font-size: 0.9rem;
   background-color: gold;
   color: black;
-  padding: 0 10px 0 20px;
-  display: inline-block;
-  position: relative;
+  padding: 0 20px 0 0;
+  display: inline-flex;
+  align-items: center;
   clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
-  &::after {
+  &::before {
     content: "";
-    position: absolute;
+    margin: 0 5px 0 10px;
     border-radius: 100vh;
-    top: 0;
-    transform: translateY(50%);
-    left: 5%;
     width: 10px;
     height: 10px;
     background: var(--bg-color);
   }
-`
-
-const header = css`
-  text-align: center;
-  margin: 10px 0;
 `
 
 const Index = ({ data }) => {
@@ -70,37 +60,21 @@ const Index = ({ data }) => {
         customUrl={markdownRemark?.frontmatter?.path}
       />
       <Article>
-        <h1
-          css={css`
-            ${header}
-          `}
-        >
+        <h1 className="has-text-weight-bold is-size-3 has-text-centered">
           {markdownRemark?.frontmatter?.title}
         </h1>
-        <p
-          css={css`
-            ${header}
-          `}
-        >
+        <p className="has-text-centered">
           {markdownRemark?.frontmatter?.author}
         </p>
-        <p
-          css={css`
-            ${header}
-          `}
-        >
+        <p className="has-text-centered">
           {markdownRemark?.frontmatter?.date}
         </p>
-        <p
-          css={css`
-            ${header}
-          `}
-        >
+        <p className="has-text-centered has-text-weight-medium">
           {markdownRemark?.frontmatter?.categories.map((category, i) => (
             <Category key={i}>{category}</Category>
           ))}
         </p>
-        <div
+        <div css={css`line-height: 2`}
           dangerouslySetInnerHTML={{
             __html: `<p>${markdownRemark.html}</p>`,
           }}

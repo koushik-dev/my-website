@@ -21,9 +21,8 @@ const CardContainer = styled.div`
   background-color: var(--card-bg);
   min-height: 275px;
   border-radius: 5px;
-  box-shadow: 5px 5px 10px var(--shadow-color);
   overflow: hidden;
-  box-shadow: 5px 5px red, 10px 10px blue;
+  box-shadow: 5px 20px 10px -15px #000;
   transition: box-shadow 0.5s ease;
   &:hover {
     box-shadow: none;
@@ -39,21 +38,18 @@ const Content = styled.p`
 `
 
 const Category = styled.span`
-  margin: 0 0 10px 10px;
+  margin: 0 10px 10px 10px;
   font-size: 0.9rem;
   background-color: gold;
   color: black;
-  padding: 0 10px 0 20px;
-  display: inline-block;
-  position: relative;
+  padding: 0 20px 0 0;
+  display: inline-flex;
+  align-items: center;
   clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
-  &::after {
+  &::before {
     content: "";
-    position: absolute;
+    margin: 0 5px 0 10px;
     border-radius: 100vh;
-    top: 0;
-    transform: translateY(50%);
-    left: 5%;
     width: 10px;
     height: 10px;
     background: var(--bg-color);
