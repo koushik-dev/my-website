@@ -4,7 +4,7 @@ author: "Koushik"
 date: "2020-05-21T11:17:42.881Z"
 path: "/blog/searchblogs"
 bannerImg: "./images/search/search.jpg"
-categories: ['search']
+categories: ['search', 'site-construction']
 ---
 ![image](./images/search/search.jpg)  
 \

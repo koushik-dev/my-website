@@ -4,7 +4,7 @@ author: "Koushik"
 date: "2020-05-07T12:43:02.742Z"
 path: "/blog/navigatetoblogs"
 bannerImg: "./images/blogdisplay/laptop.jpeg"
-categories: ['dashboard']
+categories: ['dashboard', 'site-construction']
 ---
 
 ![image](./images/blogdisplay/laptop.jpeg)

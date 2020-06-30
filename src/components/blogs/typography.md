@@ -4,7 +4,7 @@ author: "Koushik"
 date: "2020-05-12T04:36:24.401Z"
 path: "/blog/typographyandalignments"
 bannerImg: "./images/typography/banner.jpg"
-categories: ['typography']
+categories: ['typography', 'site-construction']
 ---
 ![image](./images/typography/banner.jpg)  
 \

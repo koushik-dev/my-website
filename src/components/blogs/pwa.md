@@ -4,7 +4,7 @@ author: "Koushik"
 date: "2020-06-29T04:06:41.468Z"
 path: "/blog/pwa"
 bannerImg: "./images/pwa/pwa.jpg"
-categories: ['PWA', 'css']
+categories: ['PWA', 'css', 'site-construction']
 ---
 ![image](./images/pwa/pwa.jpg)
 \

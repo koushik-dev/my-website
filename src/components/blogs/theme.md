@@ -4,7 +4,7 @@ author: "Koushik"
 date: "2020-05-20T04:03:11.270Z"
 path: "/blog/theming"
 bannerImg: "./images/theme/banner.jpg"
-categories: ['theme', 'css-variables']
+categories: ['theme', 'css-variables', 'site-construction']
 ---
 ![image](./images/theme/banner.jpg)  
 \

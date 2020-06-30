@@ -22,7 +22,7 @@ const CardContainer = styled.div`
   min-height: 275px;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 5px 20px 10px -15px #000;
+  box-shadow: 5px 20px 10px -15px var(--text-color);
   transition: box-shadow 0.5s ease;
   &:hover {
     box-shadow: none;
