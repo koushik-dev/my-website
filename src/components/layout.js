@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
             --highlight-color: #5e6afa;
           }
           .dark {
-            --bg-color: #242e4c;
+            --bg-color: #3e3e3e;
             --shadow-color: #000000;
             --text-color: white;
             --switch-color: wheat;

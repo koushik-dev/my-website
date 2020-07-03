@@ -27,6 +27,12 @@ const Article = styled.article`
     border-width: 0 5px 0 5px;
     border-style: solid;
   }
+  strong {
+    color: white;
+  }
+  ul {
+    list-style-type: square;
+  }
 `
 const Category = styled.span`
   margin: 10px;
