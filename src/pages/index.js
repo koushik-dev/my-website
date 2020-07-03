@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import styled from "@emotion/styled"
-import 'bulma';
 
 const TileWrapper = styled.div`
   max-width: 1140px;

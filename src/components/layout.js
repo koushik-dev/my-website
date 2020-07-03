@@ -6,6 +6,7 @@ import Header from "./header"
 
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
+import 'bulma';
 
 const Container = styled.div`
   background-color: var(--shadow-color);
