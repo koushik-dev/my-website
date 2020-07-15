@@ -29,21 +29,19 @@ Now we got all the markdown files in the application. Loop through the files and
 ![code2](./images/blogdisplay/code2.png)  
 \
 **Layout**  
-\
 For layout, we are using flex layout. The parent `div` will be a flex-container and each blog tile will be the child. We are provided the tile with `min-width` and `min-height` to achieve the layout.  
 \
 **Tile Images**  
-\
 Each tile has to have a unique image. This is achieved by giving the banner image property in frontmatter. `gatsby-transformer-sharp` plugin will find the image references in the application and provide you with a image object. The graphql query will allow us to access the same.  
 \
 ![code3](./images/blogdisplay/code3.png)    
 \
 **Mischalaneous**  
-<br/>
 - Removed the default width and height of the plugin as it is cropping th eimages in the markdown.  
 <br/>
 - Added a min-width and min-height to the card to fit it to the layout.  
 
 
 \
-For now we are displaying just the title of the blog, in the course of the development we will add the necessary things. Thats it folks!. 
+For now we are displaying just the title of the blog, in the course of the development we will add the necessary things.  
+Thats it folks!. 

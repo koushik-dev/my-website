@@ -19,7 +19,6 @@ The need to change every css to emotion styled components is having several adva
 
 \
 **Common Issues**  
-\
 After installing `gatsby-plugin-emotion` to use emotion in our application, i faced a issue.  
 \
 <kbd>Can't resolve '@emotion/core' in '/Users/you/tmp/gatsby-site/.cache'</kbd>  

@@ -17,8 +17,7 @@ To start with, `gatsby-plugin-prefetch-google-fonts` is added to the config file
 \
 Added font `poppins` to the site.  
 \
-**Mischalaneous**  
-<br/>
+**Mischalaneous**
 - Added static height to the tiles in the dashboard as each have different sized images and text.
 - `overflow:hidden` for the text inside the tile to restrict long titles.
 - Used CSS variables to color the text in the entire site so in future changes it is easy to change the text color at one place.

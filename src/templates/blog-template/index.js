@@ -28,7 +28,8 @@ const Article = styled.article`
     border-style: solid;
   }
   strong {
-    color: white;
+    font-size: 1.5rem;
+    color: var(--text-color);
   }
   ul {
     list-style-type: square;

@@ -53,7 +53,6 @@ const Layout = ({ children }) => {
               -9px -9px 0 -5px var(--switch-color),
               -9px 9px 0 -5px var(--switch-color),
               9px -9px 0 -5px var(--switch-color);
-            --switch-content: null;
             --card-bg: #ffffff;
             --highlight-color: #5e6afa;
           }
@@ -61,9 +60,8 @@ const Layout = ({ children }) => {
             --bg-color: #3e3e3e;
             --shadow-color: #000000;
             --text-color: white;
-            --switch-color: wheat;
-            --switch-shadow: none;
-            --switch-content: ${`''`};
+            --switch-color: transparent;
+            --switch-shadow: -4px 3px wheat;
             --card-bg: #222222;
             --highlight-color: #5a73d8;
           }

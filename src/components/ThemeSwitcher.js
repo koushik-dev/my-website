@@ -11,15 +11,6 @@ const Theme = styled.div`
   position: relative;
   box-shadow: var(--switch-shadow);
   transition: all 0.25s ease;
-  &::before {
-    content: var(--switch-content);
-    width: 100%;
-    height: 100%;
-    border-radius: 100vh;
-    position: absolute;
-    background-color: var(--bg-color);
-    top: -30%;
-    right: -40%;
 `
 
 // toggle body class for theme

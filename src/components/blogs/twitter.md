@@ -21,7 +21,6 @@ The `seo` component querys the `siteMetadata` as renders the necessary `metaTag`
 
 \
 **Obstacles Tackled**  
-\
 For twitter card, it is a static value which resembles the size of the card to display in the twitter when posted. I used `summary` which display small image in the left and summary in the right.  
 \
 For site url, provided the link in the `siteMetadata` which is queried through `graphql`.  
@@ -37,5 +36,4 @@ With static siteurl as prefix and the randomly generated image name as suffix gi
 Providing the above achieved url, Twitter is able to create a card with dynamic images for each page in the application.  
 \
 **P.S.**  
-\
 Psst!!! Since the meta tag creation is same for all the pages, we need to put it in common place something like `layout`. So that we don't need to render the `seo` separately in all the components we are creating in the course of the application contruction.
