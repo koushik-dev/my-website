@@ -9,6 +9,7 @@ const LinkWrapper = styled.div`
   min-height: 300px;
   margin: 10px;
   transition: transform 0.5s ease;
+  flex: 1;
   a {
     color: var(--text-color);
     text-decoration: none;
@@ -24,6 +25,7 @@ const CardContainer = styled.div`
   overflow: hidden;
   box-shadow: 5px 20px 10px -15px var(--text-color);
   transition: box-shadow 0.5s ease;
+  height: 100%;
   &:hover {
     box-shadow: none;
   }

@@ -40,10 +40,21 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO title="Home" twitterImage={data.image?.fluid?.src} />
-      <Input type="text" className="input column is-one-third" placeholder="Type to search" name="search" value={search} onChange={onSearch}></Input>
+      <Input
+        type="text"
+        className="input column is-one-third"
+        placeholder="Type to search"
+        name="search"
+        value={search}
+        onChange={onSearch}
+      ></Input>
       <TileWrapper>
         {cards.map((edge, i) => (
-          <div key={i} className="column is-full px-0 py-0 is-full-mobile">
+          <div
+            key={i}
+            className="column is-full px-0 py-0 is-full-mobile is-flex"
+            style={{ flexDirection: "column" }}
+          >
             <Card frontmatter={edge.node.frontmatter} />
           </div>
         ))}
